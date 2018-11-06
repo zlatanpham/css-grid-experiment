@@ -1,5 +1,6 @@
 import React from "react";
+import GooglePlay from "./pages/GooglePlay";
 
-const App = () => <div>this is a test</div>;
+const App = () => <GooglePlay />;
 
 export default App;
