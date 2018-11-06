@@ -20,7 +20,13 @@ module.exports = mode => ({
         exclude: /node_modules/,
         use: [
           "style-loader",
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+              localIdentName: "__[hash:base64:5]"
+            }
+          },
           {
             loader: "postcss-loader",
             options: { plugins: () => [require("autoprefixer")] }
